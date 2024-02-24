@@ -1,9 +1,9 @@
 //turn pages when clicking next or prev button
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 
-pageTurnBtn.forEach((el, index) => {
-    el.onclick = () => {
-        const pageTurnId = el.getAttribute('data-page');
+pageTurnBtn.forEach((elem, index) => {
+    elem.onclick = () => {
+        const pageTurnId = elem.getAttribute('data-page');
         const pageTurn = document.getElementById(pageTurnId);
 
         if (pageTurn.classList.contains('turn')) {
@@ -66,35 +66,3 @@ backProfileBtn.onclick = () => {
         }, (index + 1) * 200 + 100)
     })
 }
-
-// opening animation 
-const coverRight = document.querySelector('.cover.cover-right');
-const pageLeft = document.querySelector('.book-page.page-left');
-
-// opening animation (cover right animation) 
-setTimeout(() => {
-    coverRight.classList.add('turn');
-}, 2100)
-
-setTimeout(() => {
-    coverRight.style.zIndex = -1;
-}, 2800)
-
-// opening animation (page left or profile animation) 
-setTimeout(() => {
-    pageLeft.style.zIndex = 20;
-}, 3200)
-
-// opening animation (all page right animation) 
-pages.forEach((_, index) => {
-    setTimeout(() => {
-        reverseIndex();
-        pages[pageNumber].classList.remove('turn');
-
-        setTimeout(() => {
-            reverseIndex();
-            pages[pageNumber].style.zIndex = 10 + index;
-        }, 500)
-
-    }, (index + 1) * 200 + 2100)
-})

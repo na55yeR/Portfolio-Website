@@ -11,14 +11,14 @@
 }
 
 :root {
-    --bg-color: #081b29;
-    --main-color: #00abf0;
+    --bg-color: #1c1d1d;
+    --main-color: #2a4034;
     --text-color: #333;
     --second-text-color: #555;
     --white-color: #fff;
-    --cover-color: linear-gradient(45deg, #00abf0, #006e90);
-    --pages-color: linear-gradient(90deg, #fff, #fff);
-    --border: .125rem solid #00abf0;
+    --cover-color: linear-gradient(45deg, #2a4034, #718472);
+    --pages-color: linear-gradient(90deg, #dbdec5, #dbdec5);
+    --border: .150rem solid #2a4034;
     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
 }
 
@@ -38,18 +38,6 @@ body {
     height: 45rem;
     padding: 2rem;
     perspective: 250rem;
-    animation: show-animate 2s forwards;
-}
-
-@keyframes show-animate {
-    0%,30% {
-        opacity: 0;
-        transform: rotate(-20deg);
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
 }
 
 .cover {
@@ -67,7 +55,7 @@ body {
 
 .cover.cover-left {
     z-index: -1;
-} 
+}
 
 .cover.cover-right {
     z-index: 100;
@@ -97,7 +85,7 @@ body {
 }
 
 .book-page.page-left {
-    box-shadow: -.6rem .6rem .6rem rgba(0, 0, 0, .1);
+    background: -.6rem .6rem .6rem rgba(0, 0, 0, .1);
 }
 
 .profile-page {
@@ -243,12 +231,24 @@ body {
     border-radius: 50%;
 }
 
+.workeduc-content li {
+    font-size: small;
+}
+
+.workeduc-box h3 {
+    font-size: medium;
+}
+
 .workeduc-content .year {
     color: var(--main-color);
 }
 
 .workeduc-content .year i {
     margin-right: .4rem;
+}
+
+.educ-box h3 {
+    font-size: medium;
 }
 
 .number-page {
@@ -311,6 +311,7 @@ body {
 
 .services-content p {
     margin: .2rem 0 .8rem;
+    font-size: 0.9rem;
 }
 
 .services-content .btn {
@@ -362,23 +363,19 @@ body {
     color: var(--main-color);
 }
 
-.portfolio-box .img-box {
+.portfolio-box .vid-box {
     display: flex;
-    width: 100%;
+    width: 98%;
     height: 15rem;
     border: var(--border);
     border-radius: .5rem;
     overflow: hidden;
 }
 
-.portfolio-box .img-box img {
-    width: 100%;
+.portfolio-box .vid-box video {
+    height: auto;
+    width: auto;
     object-fit: cover;
-    transition: 0.5s ease;
-}
-
-.portfolio-box .img-box:hover img {
-    transform: scale(1.1);
 }
 
 .portfolio-box .info-box {
@@ -407,6 +404,10 @@ body {
 }
 
 .portfolio-box .info-box p:nth-of-type(1) {
+    font-weight: 600;
+}
+
+.portfolio-box .info-box p:nth-of-type(3) {
     font-weight: 600;
 }
 
@@ -441,7 +442,7 @@ body {
 .contact-box textarea {
     resize: none;
     height: 15rem;
-} 
+}
 
 .contact-box .btn {
     cursor: pointer;
